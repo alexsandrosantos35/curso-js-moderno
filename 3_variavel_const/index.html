@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3_variável const</title>
+</head>
+<body>
+    <script>
+        const secretNumber = 20;
+
+        const will = {
+            name: "Willian",
+            age: 56 
+        }
+
+       /* console.log(will.age);
+        will.age = 26;
+        console.log(will.age); */
+
+      /*  will = {
+            name: "bill",
+            age: 3
+        }*/
+
+        Object.freeze(will);
+
+        console.log(will.age);
+        will.age = 26;
+        console.log(will);
+
+
+    </script>
+</body>
+</html>
