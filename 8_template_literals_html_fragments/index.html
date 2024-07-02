@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8_template literals frgmentos de html</title>
+</head>
+<body>
+    <script>
+       const article = {
+        title: "Aprendendo template strings.",
+        intro: "Uma breve explicação de como utilizar template strings do ES6 no seu códigp hoje.", 
+        body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est aliquam enim similique autem facilis quibusdam, quod aperiam deleniti ducimus mollitia!",
+        tags: ["ES6", "js", "template literals"],
+        author: "Alexsandro"
+       }
+       
+       function renderAuthor(nome) {
+        return (nome) ? nome : "Unknow";
+       }
+
+       const markup = 
+        `<article>
+
+            <header>
+                <h1>${article.title}</h1>
+            </header>
+
+            <section>
+                <p>${article.intro}
+            </section>
+
+            <footer>
+                <u>
+                ${article.tags.map((tag) => `<li>${tag}</li>`).join("")}    
+                </ul>
+                ${renderAuthor(article.author)}
+            </footer>
+
+        </article>
+        `
+        document.body.innerHTML = markup;
+    </script>
+</body>
+</html>
