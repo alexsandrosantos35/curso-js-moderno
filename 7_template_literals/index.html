@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7_template literals</title>
+</head>
+<body>
+    <script>
+        const ireland = {
+            live: "Dublin",
+            love: "Galwai"
+        }
+
+        const text = "Eu moro em " + ireland.live + " e sou apaixonado por " + ireland.love;
+        console.log(text);
+
+        const newText = `Eu moro em ${ireland.live} e sou apaixonado por ${ireland.love}!`;
+        console.log(newText);
+
+        const fruits = "Banana"
+                           +"\n" 
+                        +"Orange"
+                            +"\n"
+                        +"apple"
+        console.log(fruits); 
+
+        const newFruits = `Banana
+                           orange
+                           apple`;
+        console.log(newFruits);
+    </script>
+</body>
+</html>
