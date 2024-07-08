@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15_métodos find e findIndex</title>
+</head>
+<body>
+    <script>
+        const data = [
+            {
+                name: "willian",
+                age: 26,
+                city: "Dublin"
+            },
+            {
+                name: "Jonas",
+                age: 22,
+                city: "Camaçari"
+            }
+        ];
+
+        const sampleArray = [4, -5, 0, -1];
+        const underZero = sampleArray.find(x => x < 0);
+        console.log(underZero);
+
+        const underZeroIndex = sampleArray.findIndex(x => x < 0);
+        console.log(underZeroIndex);
+
+        const will = data.find(person => person.name === "willian");
+        console.log(will);
+
+        const willIndex = data.findIndex(person => person.name === "willian");
+        console.log(willIndex);
+    </script>
+</body>
+</html>
