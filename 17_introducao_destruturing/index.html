@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17_introdução ao destructuring</title>
+</head>
+<body>
+    <script>
+        const data = {
+            name: "Willian",
+            surName: "Justen",
+            age: 26,
+            blog: "WWW.willianjusten.com.br",
+            social: {
+                twitter: "@willian_justen",
+                facebook: "/willianjusten"
+            }
+        }
+
+        // const name = data.name;
+        // const surName = data.surName;
+        // const twitter = data.social.twitter;
+        // console.log(name);
+        // console.log(surName);
+        // console.log(twitter);
+
+        const {name, surName} = data;
+
+        console.log(name);
+        console.log(surName);
+
+        const {twitter} = data.social
+
+        console.log(twitter);
+
+        const {facebook: fb} = data.social;
+
+        console.log(fb);
+
+        const {city} = data;
+
+        console.log(city = "Dublin");
+
+    </script>
+</body>
+</html>
