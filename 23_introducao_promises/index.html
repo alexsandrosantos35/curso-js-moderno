@@ -3,21 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>22_introdução ás promises</title>
+    <title>23_introdução ás promises</title>
 </head>
 <body>
     <script>
-        var defer = promises((resolve, reject) => {
+        var defer = new Promise((resolve, reject) => {
+          setTimeout(() => {
             if(true) {
                 resolve("Hello! It works");
             }
             else {
                 reject("Error!");
             }
+         }, 2000);
+            
         });
 
         defer
+            .then((data) => {
+                console.log(data);
+                return "foo";
+            }
+            )
             .then((data) => console.log(data))
+            .catch((err) => console.log(err));
     </script>
 </body>
 </html>
