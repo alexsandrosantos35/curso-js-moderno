@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20 spread operator</title>
+</head>
+<body>
+    <script>
+        const front = ["react", "vue", "Angular"];
+        const back = ["python", "java", "nodejs"];
+
+        // let fullstack = [];
+        // fullstack = fullstack.concat(front);
+        // fullstack.push("Rxjs");
+        // fullstack = fullstack.concat(back);
+
+        let fullstack = [...front, "Rxjs", ...back];
+        
+        console.log(fullstack);
+
+
+        // console.log([..."alex"]);
+        // console.log(...front);
+    </script>
+</body>
+</html>
