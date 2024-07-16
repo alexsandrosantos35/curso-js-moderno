@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24_exemplo com promises</title>
+</head>
+<body>
+    <script>
+        const currency = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve({currency: "Euro", velue: 5.40})
+            }, 2000);
+        });
+
+        const countries = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(["ireland", "england", "scotland"])
+            }, 6000);
+        });
+
+
+        // Promise
+        //     .all([currency, countries])
+        //     .then(responses => {
+        //         console.log(responses);
+        //     });
+
+        Promise
+            .race([currency, countries])
+            .then(responses => {
+                console.log(responses);
+            });
+    </script>
+</body>
+</html>

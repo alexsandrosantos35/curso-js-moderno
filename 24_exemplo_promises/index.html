@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24_exemplo com promises</title>
+</head>
+<body>
+    <script>
+        var posts = fetch("https://willianjusten.com.br/search.json");
+
+        setTimeout(() => {
+            console.log(posts);
+        },3000);
+
+        posts
+            .then((data) => data.json())
+            .then(data => data.map(post => {
+                console.log(post.slip.advice)
+            }));
+
+        
+    </script>
+</body>
+</html>
