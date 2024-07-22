@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30_oterator for...of</title>
+</head>
+<body>
+    <script>
+        //iterator um for por exemplo
+        //iterable [1, 2, 3, 4, 5, 6]
+
+        let text = "Ireland";//iterable
+        var it = text[Symbol.iterator]();//iterator
+
+        // console.log(it.next());
+        // console.log(it.next());
+        // console.log(it.next());
+        // console.log(it.next());
+        // console.log(it.next());
+        // console.log(it.next());
+        // console.log(it.next());
+        // console.log(it.next());
+
+        for (letter of text) {
+            console.log(letter);
+            if(letter == "a") {
+                break;
+            }
+        }
+
+    </script>
+</body>
+</html>
